@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>رویداد استارتاپی هم‌ساز | کوئرا × همراه اول</title>
+  <meta name="description" content="هم‌ساز؛ رویداد استارتاپی کوئرا و همراه اول. ایده‌ت رو بیار، تیمت رو پیدا کن، محصولت رو بساز و به سرمایه‌گذارها ارائه بده.">
+  <meta name="theme-color" content="#0A1424">
+  <link rel="icon" href="assets/logos/hamsaz.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="هم‌ساز">
+        <img src="assets/logos/hamsaz.svg" alt="" class="brand__mark">
+        <span class="brand__name">هم‌ساز</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">درباره</a>
+        <a href="#tracks">حوزه‌ها</a>
+        <a href="#timeline">مراحل</a>
+        <a href="#prizes">جوایز</a>
+        <a href="#faq">سوالات</a>
+        <a href="#register" class="btn btn--primary btn--sm nav__cta">ثبت‌نام</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="منو" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="label-brick reveal">رویداد استارتاپی</span>
+          <h1 class="hero__title reveal">هم‌ساز</h1>
+          <p class="hero__lead reveal">
+            ایده‌ت رو بیار، با هم‌تیمی‌هات آجر به آجر محصولت رو بساز و تا جلوی سرمایه‌گذارها پرتابش کن.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#register" class="btn btn--primary btn--lg">ثبت‌نام رایگان</a>
+            <a href="#about" class="btn btn--ghost btn--lg">بیشتر بدونم</a>
+          </div>
+          <div class="partners reveal">
+            <span>با همکاری</span>
+            <img src="assets/logos/quera.svg" alt="کوئرا" class="partners__quera logo-white">
+            <span class="partners__dot"></span>
+            <img src="assets/logos/hamrah-academy.svg" alt="آکادمی همراه اول" class="partners__hamrah logo-white">
+          </div>
+        </div>
+
+        <!-- LEGO rocket -->
+        <div class="hero__visual reveal" aria-hidden="true">
+          <svg class="rocket-svg" id="rocketSvg" viewBox="0 0 260 380" xmlns="http://www.w3.org/2000/svg">
+            <!-- floating bricks -->
+            <g class="float-a">
+              <rect x="14" y="62" width="50" height="22" rx="3" fill="#046DE2"/>
+              <rect x="14" y="78" width="50" height="6" rx="2" fill="#0352AB"/>
+              <rect x="20" y="54" width="14" height="9" rx="2" fill="#3D8EEA"/>
+              <rect x="44" y="54" width="14" height="9" rx="2" fill="#3D8EEA"/>
+            </g>
+            <g class="float-b">
+              <rect x="212" y="136" width="28" height="20" rx="3" fill="#23D0FF"/>
+              <rect x="212" y="151" width="28" height="5" rx="2" fill="#12A9D4"/>
+              <rect x="219" y="128" width="14" height="9" rx="2" fill="#5FDDFF"/>
+            </g>
+
+            <!-- baseplate -->
+            <g>
+              <rect x="10" y="342" width="240" height="20" rx="4" fill="#1C2E47"/>
+              <rect x="10" y="355" width="240" height="7" rx="3" fill="#14233A"/>
+              <g fill="#2A4062">
+                <rect x="18" y="334" width="12" height="9" rx="2"/><rect x="38" y="334" width="12" height="9" rx="2"/>
+                <rect x="58" y="334" width="12" height="9" rx="2"/><rect x="78" y="334" width="12" height="9" rx="2"/>
+                <rect x="170" y="334" width="12" height="9" rx="2"/><rect x="190" y="334" width="12" height="9" rx="2"/>
+                <rect x="210" y="334" width="12" height="9" rx="2"/><rect x="230" y="334" width="12" height="9" rx="2"/>
+              </g>
+            </g>
+
+            <!-- rocket -->
+            <g class="rocket">
+              <!-- flame -->
+              <g class="flame">
+                <path d="M110 318 Q130 380 150 318 Z" fill="#FF8A00"/>
+                <path d="M119 318 Q130 356 141 318 Z" fill="#FFD84D"/>
+              </g>
+              <!-- engine -->
+              <rect x="104" y="302" width="52" height="18" rx="3" fill="#3A4F6B"/>
+              <rect x="104" y="314" width="52" height="6" rx="2" fill="#2A3B52"/>
+              <!-- fins -->
+              <path d="M84 226 L42 296 Q38 304 46 304 H84 Z" fill="#0076A6"/>
+              <path d="M176 226 L218 296 Q222 304 214 304 H176 Z" fill="#005A80"/>
+              <!-- yellow plate -->
+              <rect x="82" y="282" width="96" height="22" rx="3" fill="#0076A6"/>
+              <rect x="158" y="282" width="20" height="22" fill="#005F87"/>
+              <rect x="82" y="298" width="96" height="6" rx="2" fill="#004E70"/>
+              <!-- white brick 2 -->
+              <rect x="82" y="238" width="96" height="44" rx="3" fill="#F6F8FB"/>
+              <rect x="158" y="238" width="20" height="44" fill="#DDE4EE"/>
+              <rect x="82" y="276" width="96" height="6" fill="#C8D2DF"/>
+              <!-- blue brick -->
+              <rect x="82" y="194" width="96" height="44" rx="3" fill="#046DE2"/>
+              <rect x="158" y="194" width="20" height="44" fill="#0458B8"/>
+              <rect x="82" y="232" width="96" height="6" fill="#03479A"/>
+              <!-- white brick 1 with window -->
+              <rect x="82" y="110" width="96" height="84" rx="3" fill="#F6F8FB"/>
+              <rect x="158" y="110" width="20" height="84" fill="#DDE4EE"/>
+              <rect x="82" y="188" width="96" height="6" fill="#C8D2DF"/>
+              <circle cx="128" cy="150" r="25" fill="#0A1424"/>
+              <circle cx="128" cy="150" r="18" fill="#23D0FF"/>
+              <ellipse cx="121" cy="143" rx="6" ry="4" fill="#fff" opacity=".85"/>
+              <!-- nose cone -->
+              <path d="M130 26 L178 110 H82 Z" fill="#23D0FF"/>
+              <path d="M130 26 L178 110 H130 Z" fill="#12A9D4"/>
+              <rect x="121" y="14" width="18" height="14" rx="3" fill="#23D0FF"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="container">
+        <dl class="stats reveal">
+          <div><dt><span class="count" data-to="350">0</span> میلیون</dt><dd>تومان جایزه نقدی</dd></div>
+          <div><dt><span class="count" data-to="20">0</span> تیم</dt><dd>برخوردار از وام و تسهیلات</dd></div>
+          <div><dt><span class="count" data-to="6">0</span> هفته</dt><dd>ساخت MVP با منتور</dd></div>
+          <div><dt>رایگان</dt><dd>شرکت در همه مراحل</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="label-brick label-brick--cyan">درباره رویداد</span>
+          <h2>آغاز مسیر تو در دنیای استارتاپ‌ها</h2>
+          <p>
+            هم‌ساز رویداد استارتاپی‌ایه که <b>کوئرا</b> و <b>همراه اول</b> با هم برگزارش می‌کنن.
+            ایده‌ت رو به محصول تبدیل می‌کنی، ساختن یه کسب‌وکار فناورانه رو تجربه می‌کنی و کنار منتورهای حرفه‌ای رشد می‌کنی.
+          </p>
+        </div>
+
+        <div class="paths">
+          <article class="card path reveal">
+            <span class="brick brick--blue" style="--w:2"></span>
+            <h3>مسیر فردی</h3>
+            <p>تیم نداری؟ در یکی از مسیرهای هوش مصنوعی، نرم‌افزار یا محصول ثبت‌نام کن و توی رویداد تیم‌سازی، هم‌تیمی‌هات رو پیدا کن.</p>
+          </article>
+          <article class="card path reveal">
+            <span class="brick-stack" aria-hidden="true">
+              <span class="brick brick--teal" style="--w:2"></span>
+              <span class="brick brick--cyan" style="--w:3"></span>
+            </span>
+            <h3>مسیر تیمی</h3>
+            <p>تیم ۳ تا ۴ نفره‌ت آماده‌ست؟ از همون اول تیمی وارد شو و کار روی ایده و Pitch Deck رو شروع کن.</p>
+          </article>
+        </div>
+
+        <ul class="features reveal">
+          <li><span class="brick brick--cyan" style="--w:1"></span><b>آموزش</b><small>کارگاه‌های کاربردی</small></li>
+          <li><span class="brick brick--blue" style="--w:1"></span><b>منتورینگ</b><small>منتور تخصصی هر حوزه</small></li>
+          <li><span class="brick brick--teal" style="--w:1"></span><b>تیم‌سازی</b><small>حضوری و مجازی</small></li>
+          <li><span class="brick brick--slate" style="--w:1"></span><b>رقابت</b><small>جوایز و جذب سرمایه</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TRACKS ============ -->
+    <section class="section section--tint" id="tracks">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="label-brick label-brick--teal">حوزه‌ها و چالش‌ها</span>
+          <h2>روی مسئله‌های واقعی کار کن</h2>
+          <p>حوزه‌های زیر پیشنهادی‌ان؛ ایده‌های بین‌رشته‌ای هم پذیرفته می‌شن.</p>
+        </div>
+
+        <div class="tracks">
+          <article class="card track reveal">
+            <span class="brick brick--blue" style="--w:2"></span>
+            <h3>فناوری مالی <small>FinTech</small></h3>
+            <p>کشف تقلب، احراز هویت هوشمند، پیش‌بینی ریسک و شخصی‌سازی خدمات مالی.</p>
+          </article>
+          <article class="card track reveal">
+            <span class="brick brick--teal" style="--w:2"></span>
+            <h3>سلامت <small>HealthTech</small></h3>
+            <p>تشخیص زودهنگام بیماری، تحلیل تصاویر پزشکی و پایش داده‌های سلامت.</p>
+          </article>
+          <article class="card track reveal">
+            <span class="brick brick--slate" style="--w:2"></span>
+            <h3>کشاورزی <small>AgriTech</small></h3>
+            <p>تشخیص آفات، پیش‌بینی عملکرد محصول و بهینه‌سازی مصرف آب.</p>
+          </article>
+          <article class="card track reveal">
+            <span class="brick brick--cyan" style="--w:2"></span>
+            <h3>گردشگری <small>TourismTech</small></h3>
+            <p>شخصی‌سازی پیشنهاد سفر، پیش‌بینی تقاضا و مدیریت ازدحام.</p>
+          </article>
+          <article class="card track reveal">
+            <span class="brick brick--cyan" style="--w:2"></span>
+            <h3>امنیت هوش مصنوعی <small>AI Security</small></h3>
+            <p>تشخیص رفتار غیرعادی، دفاع از LLMها و تشخیص Deepfake.</p>
+          </article>
+          <article class="card track track--open reveal">
+            <span class="brick brick--slate" style="--w:2"></span>
+            <h3>ایده‌ی خودت <small>Open</small></h3>
+            <p>هر مسئله‌ی واقعی با راهکار قابل اجرا و پتانسیل تبدیل به محصول.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TIMELINE ============ -->
+    <section class="section" id="timeline">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="label-brick label-brick--slate">مراحل رویداد</span>
+          <h2>آجر به آجر تا Demo Day</h2>
+        </div>
+
+        <ol class="timeline" id="timelineList">
+          <li class="step reveal">
+            <span class="step__num brick brick--blue" style="--w:2">۱</span>
+            <div><h3>ثبت‌نام فردی یا تیمی</h3><p>تیمی (۳ تا ۴ نفر) یا فردی در مسیرهای هوش مصنوعی، نرم‌افزار یا محصول.</p></div>
+            <time>به‌زودی</time>
+          </li>
+          <li class="step reveal">
+            <span class="step__num brick brick--blue" style="--w:2">۲</span>
+            <div><h3>چالش‌های مقدماتی</h3><p>آنلاین، برای شرکت‌کننده‌های فردی و آمادگی برای تیم‌سازی.</p></div>
+            <time>به‌زودی</time>
+          </li>
+          <li class="step reveal">
+            <span class="step__num brick brick--blue" style="--w:2">۳</span>
+            <div><h3>رویداد تیم‌سازی</h3><p>حضوری و مجازی؛ تیم‌های ۳ تا ۴ نفره شکل می‌گیرن.</p></div>
+            <time>به‌زودی</time>
+          </li>
+          <li class="step reveal">
+            <span class="step__num brick brick--blue" style="--w:2">۴</span>
+            <div><h3>ارسال Pitch Deck</h3><p>داوری انجام می‌شه و تیم‌های برتر انتخاب می‌شن.</p></div>
+            <time>به‌زودی</time>
+          </li>
+          <li class="step reveal">
+            <span class="step__num brick brick--blue" style="--w:2">۵</span>
+            <div><h3>مسابقه تیمی</h3><p>ارزیابی توان فنی، منطق محصول، هماهنگی تیمی و قابلیت اجرا.</p></div>
+            <time>به‌زودی</time>
+          </li>
+          <li class="step reveal">
+            <span class="step__num brick brick--blue" style="--w:2">۶</span>
+            <div><h3>توسعه MVP</h3><p>۶ هفته آنلاین، همراه با منتورهای تخصصی و کارگاه‌های کاربردی.</p></div>
+            <time>به‌زودی</time>
+          </li>
+          <li class="step step--final reveal">
+            <span class="step__num brick brick--cyan" style="--w:2">۷</span>
+            <div><h3>اختتامیه و Demo Day</h3><p>ارائه محصول، معرفی به سرمایه‌گذارها و اهدای جوایز.</p></div>
+            <time>به‌زودی</time>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PRIZES ============ -->
+    <section class="section section--tint" id="prizes">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="label-brick label-brick--cyan">جوایز</span>
+          <h2>۳۵۰ میلیون تومان جایزه نقدی</h2>
+          <p>به‌علاوه‌ی وام و تسهیلات بانکی و امکان جذب سرمایه بذری برای تیم‌های برتر.</p>
+        </div>
+
+        <div class="podium">
+          <div class="podium__col reveal">
+            <p class="podium__amount"><b>۱۰۰</b> میلیون تومان</p>
+            <div class="podium__stack">
+              <span class="brick brick--blue"></span>
+              <span class="brick brick--blue"><em>۲</em></span>
+            </div>
+          </div>
+          <div class="podium__col podium__col--1 reveal">
+            <p class="podium__amount"><b>۲۰۰</b> میلیون تومان</p>
+            <div class="podium__stack">
+              <span class="brick brick--cyan"></span>
+              <span class="brick brick--cyan"></span>
+              <span class="brick brick--cyan"><em>۱</em></span>
+            </div>
+          </div>
+          <div class="podium__col reveal">
+            <p class="podium__amount"><b>۵۰</b> میلیون تومان</p>
+            <div class="podium__stack">
+              <span class="brick brick--teal"><em>۳</em></span>
+            </div>
+          </div>
+        </div>
+
+        <ul class="perks reveal">
+          <li><b>تیم‌های ۴ تا ۲۰:</b> وام و تسهیلات بانکی</li>
+          <li><b>Demo Day:</b> معرفی به سرمایه‌گذارها</li>
+          <li><b>منتورینگ</b> تخصصی در هر حوزه</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ REGISTER ============ -->
+    <section class="section" id="register">
+      <div class="container">
+        <div class="register reveal">
+          <div class="register__side">
+            <span class="label-brick label-brick--cyan">ثبت‌نام</span>
+            <h2>آماده‌ای با هم بسازیم؟</h2>
+            <ol class="register__steps">
+              <li><span class="brick brick--cyan" style="--w:1">۱</span>اطلاعاتت رو اینجا وارد کن.</li>
+              <li><span class="brick brick--cyan" style="--w:1">۲</span>توی کوئرا ثبت‌نام رو (فردی یا تیمی) کامل کن.</li>
+            </ol>
+          </div>
+
+          <form class="register__form" id="registerForm" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="firstName">نام <span class="opt">(اختیاری)</span></label>
+                <input id="firstName" name="first_name" type="text" autocomplete="given-name" maxlength="60">
+                <small class="err"></small>
+              </div>
+              <div class="field">
+                <label for="lastName">نام خانوادگی <span class="opt">(اختیاری)</span></label>
+                <input id="lastName" name="last_name" type="text" autocomplete="family-name" maxlength="60">
+                <small class="err"></small>
+              </div>
+              <div class="field">
+                <label for="mobile">شماره موبایل</label>
+                <input id="mobile" name="phone_number" type="tel" inputmode="numeric" autocomplete="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr" required>
+                <small class="err"></small>
+              </div>
+              <div class="field">
+                <label for="email">ایمیل</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" dir="ltr" required>
+                <small class="err"></small>
+              </div>
+              <div class="field field--full" id="birthdayField">
+                <label for="bDay">تاریخ تولد <span class="opt">(اختیاری)</span></label>
+                <div class="date-row">
+                  <select id="bDay" name="b_day" aria-label="روز"><option value="">روز</option></select>
+                  <select id="bMonth" name="b_month" aria-label="ماه"><option value="">ماه</option></select>
+                  <select id="bYear" name="b_year" aria-label="سال"><option value="">سال</option></select>
+                </div>
+                <small class="err"></small>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg btn--block" id="submitBtn">
+              <span class="btn__label">ادامه ثبت‌نام در کوئرا</span>
+              <span class="btn__loading">در حال ارسال…</span>
+            </button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--tint" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="label-brick">سوالات متداول</span>
+          <h2>سوالی داری؟</h2>
+        </div>
+
+        <div class="faq">
+          <details class="qa reveal">
+            <summary>رویداد فردی است یا تیمی؟</summary>
+            <p>هر دو. اگه تیم ۳ تا ۴ نفره داری، مستقیم روی ایده و Pitch Deck کار می‌کنی. اگه تیم نداری، فردی ثبت‌نام کن و از طریق رویداد تیم‌سازی به تیم‌ها بپیوند.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>رویداد چه زمانی برگزار می‌شود؟</summary>
+            <p>هم‌ساز یه رویداد چندمرحله‌ایه که شامل مراحل آنلاین، تیم‌سازی حضوری و مجازی و اختتامیه حضوریه. تاریخ دقیق مراحل به‌زودی اعلام می‌شه.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>آیا شرکت در هم‌ساز هزینه دارد؟</summary>
+            <p>نه. ثبت‌نام و شرکت در رویداد کاملاً رایگانه.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>اگر تیم یا ایده نداشته باشم، می‌توانم شرکت کنم؟</summary>
+            <p>حتماً. فردی ثبت‌نام کن و توی تیم‌سازی شرکت کن. داشتن ایده، مهارت و انگیزه کافیه و سابقه کاری یا رزومه معیار پذیرش نیست.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>آیا بعد از رویداد فرصت همکاری یا جذب سرمایه وجود دارد؟</summary>
+            <p>تیم‌های برتر در Demo Day به سرمایه‌گذارها و بازیگران صنعت معرفی می‌شن و می‌تونن مسیر همکاری یا جذب سرمایه رو ادامه بدن.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="cta reveal">
+        <h2>ایده‌ت منتظر یه تیمه!</h2>
+        <a href="#register" class="btn btn--primary btn--lg">ثبت‌نام رایگان</a>
+      </div>
+      <div class="footer__bottom">
+        <a href="#top" class="brand brand--light">
+          <img src="assets/logos/hamsaz.svg" alt="" class="brand__mark">
+          <span class="brand__name">هم‌ساز</span>
+        </a>
+        <div class="footer__orgs">
+          <a href="https://quera.org/" target="_blank" rel="noopener"><img src="assets/logos/quera.svg" alt="کوئرا" class="logo-white"></a>
+          <a href="https://hamrah.academy/" target="_blank" rel="noopener"><img src="assets/logos/hamrah-academy.svg" alt="آکادمی همراه اول" class="logo-white"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- launch overlay (after successful registration) -->
+  <div class="launch" id="launch" hidden>
+    <div class="launch__rocket" id="launchRocket"></div>
+    <div class="launch__msg">
+      <h3>ثبت‌نامت داره پرتاب می‌شه!</h3>
+      <p>برای تکمیل ثبت‌نام به کوئرا منتقل می‌شی.</p>
+      <a class="btn btn--primary" id="continueLink" href="#">اگه منتقل نشدی، اینجا بزن</a>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

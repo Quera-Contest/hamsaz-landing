@@ -1,0 +1,12 @@
+<!-- لوگوی موقت هم‌ساز — با لوگوی نهایی جایگزین شود -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- yellow brick on top -->
+  <rect x="22" y="9" width="10" height="7" rx="2" fill="#6ADFFF"/>
+  <rect x="36" y="9" width="10" height="7" rx="2" fill="#6ADFFF"/>
+  <rect x="18" y="14" width="32" height="18" rx="3" fill="#23D0FF"/>
+  <rect x="18" y="27" width="32" height="5" rx="2" fill="#0FA3CE"/>
+  <!-- blue brick below -->
+  <rect x="6" y="32" width="52" height="24" rx="4" fill="#046DE2"/>
+  <rect x="6" y="50" width="52" height="6" rx="3" fill="#0352AB"/>
+  <rect x="9" y="26" width="10" height="7" rx="2" fill="#3D8EEA"/>
+</svg>
