@@ -7,9 +7,8 @@
   <meta name="description" content="هم‌ساز؛ ساخت محصول مبتنی بر هوش مصنوعی برای مسائل واقعی خدمات سازمانی. رویداد مشترک کوئرا و مرکز نوآوری همراه اول.">
   <meta name="theme-color" content="#0A1424">
   <link rel="icon" href="assets/logos/hamsaz.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/IRANSansX-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/IRANSansX-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -26,9 +25,9 @@
         <a href="#tracks">حوزه‌ها</a>
         <a href="#timeline">مراحل</a>
         <a href="#evaluation">ارزیابی</a>
-        <a href="#support">حمایت</a>
+        <a href="#support">جوایز</a>
         <a href="#faq">سوالات</a>
-        <a href="#register" class="btn btn--primary btn--sm nav__cta">ثبت‌نام</a>
+        <a href="#" class="btn btn--primary btn--sm nav__cta" data-link="register">ثبت‌نام</a>
       </nav>
       <button class="nav__burger" id="burger" aria-label="منو" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -39,10 +38,11 @@
     <section class="hero" id="top">
       <div class="container hero__inner">
         <div class="hero__text">
-          <span class="label-brick reveal">رویداد ملی نوآوری باز</span>
-          <h1 class="hero__title reveal">هم‌ساز</h1>
-          <p class="hero__lead reveal">ساخت محصول مبتنی بر هوش مصنوعی برای مسائل واقعی خدمات سازمانی</p>
+          <div class="hero__name reveal"><b>هم‌ساز</b><span class="label-brick">رویداد ملی نوآوری باز</span></div>
+          <h1 class="hero__title reveal">مسابقه‌ی تیمی ساخت <em>محصول هوش مصنوعی</em> برای مسائل واقعی خدمات سازمانی همراه اول</h1>
+          <p class="hero__lead reveal">برای دانشجوها، توسعه‌دهنده‌ها، متخصصان و تیم‌های استارتاپی از سراسر کشور؛ تیم ۱ تا ۴ نفره، آنلاین، با ۸ هفته منتورینگ و دمو دی حضوری.</p>
 
+          <!-- TODO: ساعت دقیق مهلت‌ها و دمو دی -->
           <dl class="key-dates reveal">
             <div><dt>مهلت ثبت‌نام</dt><dd>۲۱ آبان</dd></div>
             <div><dt>مهلت تحویل معرفی‌نامه</dt><dd>۲۱ آبان</dd></div>
@@ -50,15 +50,17 @@
           </dl>
 
           <div class="hero__actions reveal">
-            <a href="#register" class="btn btn--primary btn--lg">ثبت‌نام</a>
-            <a href="#" class="btn btn--ghost btn--lg" data-link="teamBot">پیدا کردن هم‌تیمی (بات تلگرام)</a>
+            <a href="#" class="btn btn--primary btn--lg" data-link="register">ثبت‌نام در مسابقه</a>
           </div>
+          <span class="hero__alt reveal">تیم نداری؟ <a href="#" data-link="teamBot">با بات تلگرام هم‌تیمی پیدا کن</a></span>
 
           <div class="partners reveal">
             <span>برگزارکنندگان</span>
-            <img src="assets/logos/quera.svg" alt="کوئرا" class="partners__quera logo-white">
-            <span class="partners__dot"></span>
-            <img src="assets/logos/hamrah-academy.svg" alt="مرکز نوآوری همراه اول" class="partners__hamrah logo-white">
+            <div class="partners__logos">
+              <img src="assets/logos/quera.svg" alt="کوئرا" class="partners__quera logo-white">
+              <span class="partners__dot"></span>
+              <img src="assets/logos/hamrah-academy.svg" alt="مرکز نوآوری همراه اول" class="partners__hamrah logo-white">
+            </div>
           </div>
         </div>
 
@@ -326,7 +328,7 @@
               <li>تنهایی؟ تیم یا هم‌تیمی پیدا کن.</li>
               <li>ثبت‌نام نهایی تیم در کوئرا انجام می‌شود.</li>
             </ul>
-            <a href="#" class="btn btn--primary" data-link="teamBot">ورود به بات تلگرام</a>
+            <a href="#" class="btn btn--ghost" data-link="teamBot">ورود به بات تلگرام</a>
           </article>
 
           <article class="card stage reveal">
@@ -433,8 +435,9 @@
     <section class="section section--tint" id="support">
       <div class="container">
         <div class="section__head reveal">
-          <span class="label-brick">حمایت از تیم‌های برتر</span>
-          <h2>بعد از ساختن، پرتاب</h2>
+          <span class="label-brick">جوایز و حمایت</span>
+          <h2>حمایت از تیم‌های برتر</h2>
+          <p>به‌جای جایزه‌ی نقدی، تیم‌های برتر وارد مسیر شتابدهی و سرمایه‌گذاری همراه اول می‌شوند.</p>
         </div>
 
         <div class="podium">
@@ -489,69 +492,20 @@
     <section class="section section--tint" id="record">
       <div class="container">
         <div class="section__head reveal">
-          <span class="label-brick">سابقه‌ی برگزارکننده</span>
-          <h2>رویدادهایی که کوئرا برگزار کرده</h2>
+          <span class="label-brick">برگزارکنندگان</span>
+          <h2>کوئرا و مرکز نوآوری همراه اول</h2>
         </div>
+        <div class="org-logos reveal">
+          <img src="assets/logos/quera.svg" alt="کوئرا" class="logo-white">
+          <span aria-hidden="true"></span>
+          <img src="assets/logos/hamrah-academy.svg" alt="مرکز نوآوری همراه اول" class="logo-white">
+        </div>
+        <p class="records__intro reveal">سابقه‌ی کوئرا در برگزاری رویدادهای ملی:</p>
         <dl class="records reveal">
           <div><dt>نواتک</dt><dd><b>۱,۱۹۶</b> شرکت‌کننده · ۱۸۲ تیم · از ۱۲ استان</dd></div>
           <div><dt>MOGS AI (مپنا)</dt><dd><b>+۱۰۰۰</b> شرکت‌کننده</dd></div>
           <div><dt>هکاتون LLM فارسی</dt><dd><b>۱,۰۹۸</b> شرکت‌کننده</dd></div>
         </dl>
-      </div>
-    </section>
-
-    <!-- ============ REGISTER ============ -->
-    <section class="section" id="register">
-      <div class="container">
-        <div class="register reveal">
-          <div class="register__side">
-            <span class="label-brick">ثبت‌نام</span>
-            <h2>آماده‌ای با هم بسازیم؟</h2>
-            <ol class="register__steps">
-              <li><span class="brick brick--cyan" style="--w:1">۱</span>نام، موبایل و ایمیلت رو اینجا وارد کن.</li>
-              <li><span class="brick brick--cyan" style="--w:1">۲</span>ادامه‌ی ثبت‌نام (فردی یا تیمی) در کوئرا انجام می‌شود.</li>
-            </ol>
-          </div>
-
-          <form class="register__form" id="registerForm" novalidate>
-            <div class="form__grid">
-              <div class="field">
-                <label for="firstName">نام</label>
-                <input id="firstName" name="first_name" type="text" autocomplete="given-name" maxlength="60" required>
-                <small class="err"></small>
-              </div>
-              <div class="field">
-                <label for="lastName">نام خانوادگی</label>
-                <input id="lastName" name="last_name" type="text" autocomplete="family-name" maxlength="60" required>
-                <small class="err"></small>
-              </div>
-              <div class="field">
-                <label for="mobile">شماره موبایل</label>
-                <input id="mobile" name="phone_number" type="tel" inputmode="numeric" autocomplete="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr" required>
-                <small class="err"></small>
-              </div>
-              <div class="field">
-                <label for="email">ایمیل</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" dir="ltr" required>
-                <small class="err"></small>
-              </div>
-              <div class="field field--full">
-                <label class="check">
-                  <input type="checkbox" id="consent" name="consent" required>
-                  <span class="check__box" aria-hidden="true"></span>
-                  <span><a href="#" data-link="rules">قوانین</a> و <a href="#" data-link="privacy">حریم خصوصی</a> را می‌پذیرم.</span>
-                </label>
-                <small class="err"></small>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn--primary btn--lg btn--block" id="submitBtn">
-              <span class="btn__label">ادامه‌ی ثبت‌نام در کوئرا</span>
-              <span class="btn__loading">در حال ارسال…</span>
-            </button>
-            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
-        </div>
       </div>
     </section>
 
@@ -616,7 +570,8 @@
     <div class="container">
       <div class="cta reveal">
         <h2>ایده‌ت منتظر یه تیمه!</h2>
-        <a href="#register" class="btn btn--primary btn--lg">ثبت‌نام در هم‌ساز</a>
+        <p>ثبت‌نام فردی یا تیمی در کوئرا انجام می‌شود. مهلت ثبت‌نام: ۲۱ آبان</p>
+        <a href="#" class="btn btn--primary btn--lg" data-link="register">ثبت‌نام در مسابقه</a>
       </div>
       <div class="footer__grid">
         <div>
@@ -641,16 +596,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- launch overlay (after successful registration) -->
-  <div class="launch" id="launch" hidden>
-    <div class="launch__rocket" id="launchRocket"></div>
-    <div class="launch__msg">
-      <h3>ثبت‌نامت داره پرتاب می‌شه!</h3>
-      <p>برای ادامه‌ی ثبت‌نام به کوئرا منتقل می‌شی.</p>
-      <a class="btn btn--primary" id="continueLink" href="#">اگه منتقل نشدی، اینجا بزن</a>
-    </div>
-  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
