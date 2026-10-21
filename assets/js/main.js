@@ -13,13 +13,24 @@ const QUERA_API = {
   key: '', // ← کلید API رویداد
 };
 
+/* ---------- لینک‌هایی که هنوز نهایی نشده‌اند ----------
+   هر لینکی که اینجا خالی باشه، توی صفحه با برچسب «به‌زودی» و غیرفعال نشون داده می‌شه. */
+const LINKS = {
+  teamBot: '',          // بات تلگرام تیم‌سازی
+  template: '',         // فایل تمپلیت معرفی‌نامه
+  rules: '',            // صفحه‌ی قوانین
+  privacy: '',          // صفحه‌ی حریم خصوصی
+  channel: '',          // کانال اطلاع‌رسانی رویداد
+  supportTelegram: '',  // آیدی تلگرام پشتیبانی، مثلاً https://t.me/...
+  supportEmail: '',     // ایمیل پشتیبانی، مثلاً mailto:support@...
+};
+
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  const faDigits = (v) => String(v).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
   const enDigits = (v) => String(v)
     .replace(/[۰-۹]/g, (d) => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
     .replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
@@ -64,24 +75,18 @@ const QUERA_API = {
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   $$('.reveal').forEach((el) => revealIO.observe(el));
 
-  /* ---------- counters ---------- */
-  const countIO = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      const el = e.target;
-      const to = +el.dataset.to;
-      countIO.unobserve(el);
-      if (reduceMotion) { el.textContent = faDigits(to); return; }
-      const t0 = performance.now();
-      const tick = (t) => {
-        const p = Math.min((t - t0) / 1200, 1);
-        el.textContent = faDigits(Math.round(to * (1 - Math.pow(1 - p, 3))));
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-  }, { threshold: 0.6 });
-  $$('.count').forEach((el) => countIO.observe(el));
+  /* ---------- links from LINKS ---------- */
+  $$('[data-link]').forEach((a) => {
+    const url = LINKS[a.dataset.link];
+    if (url) {
+      a.href = url;
+      if (/^https?:/.test(url)) { a.target = '_blank'; a.rel = 'noopener'; }
+    } else {
+      a.classList.add('is-pending');
+      a.setAttribute('aria-disabled', 'true');
+      a.addEventListener('click', (e) => e.preventDefault());
+    }
+  });
 
   /* ---------- FAQ: one open at a time ---------- */
   $$('.qa').forEach((d) => d.addEventListener('toggle', () => {
@@ -95,14 +100,6 @@ const QUERA_API = {
   const F = form.elements;
   const status = $('#formStatus');
   const submitBtn = $('#submitBtn');
-
-  // birthday selects (Jalali)
-  const MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
-  const thisJYear = parseInt(new Intl.DateTimeFormat('en-US-u-ca-persian', { year: 'numeric' }).format(new Date()), 10) || 1405;
-  const addOpt = (sel, value, label) => sel.add(new Option(label, value));
-  for (let d = 1; d <= 31; d++) addOpt(F.b_day, d, faDigits(d));
-  MONTHS.forEach((m, i) => addOpt(F.b_month, i + 1, m));
-  for (let y = thisJYear - 10; y >= thisJYear - 80; y--) addOpt(F.b_year, y, faDigits(y));
 
   // normalize Persian/Arabic digits as the user types
   [F.phone_number, F.email].forEach((input) => input.addEventListener('input', () => {
@@ -123,38 +120,25 @@ const QUERA_API = {
     return /^9\d{9}$/.test(d) ? `+98${d}` : null;
   };
 
-  // 'YYYY-MM-DD' (Gregorian), '' when left empty, or null when invalid/incomplete
-  const birthday = () => {
-    const parts = [F.b_year.value, F.b_month.value, F.b_day.value];
-    if (parts.every((p) => !p)) return '';
-    if (parts.some((p) => !p)) return null;
-    const [jy, jm, jd] = parts.map(Number);
-    if (jd > jalaliMonthLength(jy, jm)) return null;
-    const [gy, gm, gd] = jalaliToGregorian(jy, jm, jd);
-    return `${gy}-${String(gm).padStart(2, '0')}-${String(gd).padStart(2, '0')}`;
-  };
-
   const validate = () => {
     let ok = true;
     const check = (input, msg) => { setErr(input, msg); if (msg) ok = false; };
+    check(F.first_name, F.first_name.value.trim() ? '' : 'نامت رو وارد کن.');
+    check(F.last_name, F.last_name.value.trim() ? '' : 'نام خانوادگیت رو وارد کن.');
     check(F.phone_number, normalizePhone(F.phone_number.value) ? '' : 'شماره موبایل معتبر نیست (مثلاً ۰۹۱۲۳۴۵۶۷۸۹).');
     check(F.email, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(F.email.value.trim()) ? '' : 'ایمیل معتبر نیست.');
-    check(F.b_day, birthday() === null ? 'تاریخ تولد رو کامل و درست انتخاب کن، یا خالی بذار.' : '');
+    check(F.consent, F.consent.checked ? '' : 'برای ادامه باید قوانین و حریم خصوصی رو بپذیری.');
     return ok;
   };
 
-  const buildPayload = () => {
-    const payload = { email: F.email.value.trim(), phone_number: normalizePhone(F.phone_number.value) };
-    const first = F.first_name.value.trim();
-    const last = F.last_name.value.trim();
-    const bday = birthday();
-    if (first) payload.first_name = first;
-    if (last) payload.last_name = last;
-    if (bday) payload.birthday = bday;
-    return payload;
-  };
+  const buildPayload = () => ({
+    email: F.email.value.trim(),
+    phone_number: normalizePhone(F.phone_number.value),
+    first_name: F.first_name.value.trim(),
+    last_name: F.last_name.value.trim(),
+  });
 
-  const FIELD_OF = { email: F.email, phone_number: F.phone_number, birthday: F.b_day, first_name: F.first_name, last_name: F.last_name };
+  const FIELD_OF = { email: F.email, phone_number: F.phone_number, first_name: F.first_name, last_name: F.last_name };
   const showServerErrors = (errors) => {
     if (!errors || typeof errors !== 'object') return;
     Object.entries(errors).forEach(([key, val]) => {
@@ -214,7 +198,7 @@ const QUERA_API = {
   });
 
   form.addEventListener('input', (e) => { if (e.target.closest('.has-error')) setErr(e.target, ''); });
-  form.addEventListener('change', (e) => { if (e.target.closest('#birthdayField')) setErr(F.b_day, ''); });
+  form.addEventListener('change', (e) => { if (e.target === F.consent) setErr(F.consent, ''); });
 
   /* =======================================================
      LAUNCH (rocket lifts off → redirect to Quera)
@@ -238,28 +222,3 @@ const QUERA_API = {
     overlay.hidden = true;
   }
 })();
-
-/* ---------- Jalali calendar helpers ---------- */
-function jalaliToGregorian(jy, jm, jd) {
-  jy += 1595;
-  let days = -355668 + 365 * jy + Math.floor(jy / 33) * 8 + Math.floor(((jy % 33) + 3) / 4) + jd
-    + (jm < 7 ? (jm - 1) * 31 : (jm - 7) * 30 + 186);
-  let gy = 400 * Math.floor(days / 146097);
-  days %= 146097;
-  if (days > 36524) { gy += 100 * Math.floor(--days / 36524); days %= 36524; if (days >= 365) days++; }
-  gy += 4 * Math.floor(days / 1461);
-  days %= 1461;
-  if (days > 365) { gy += Math.floor((days - 1) / 365); days = (days - 1) % 365; }
-  let gd = days + 1;
-  const ml = [0, 31, (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0 ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  let gm = 0;
-  while (gm < 13 && gd > ml[gm]) gd -= ml[gm++];
-  return [gy, gm, gd];
-}
-
-function jalaliMonthLength(jy, jm) {
-  if (jm <= 6) return 31;
-  if (jm <= 11) return 30;
-  // Esfand has 30 days only in leap years: 30 Esfand ≠ 1 Farvardin of next year
-  return jalaliToGregorian(jy, 12, 30).join() === jalaliToGregorian(jy + 1, 1, 1).join() ? 29 : 30;
-}
