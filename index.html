@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>رویداد هم‌ساز | کوئرا × مرکز نوآوری همراه اول</title>
-  <meta name="description" content="هم‌ساز؛ ساخت محصول مبتنی بر هوش مصنوعی برای مسائل واقعی خدمات سازمانی. رویداد مشترک کوئرا و مرکز نوآوری همراه اول.">
+  <title>هم‌ساز؛ از ایده تا توسعه دستیار هوشمند | کوئرا × مرکز نوآوری همراه اول</title>
+  <meta name="description" content="رویداد نوآوری باز کوئرا و مرکز نوآوری همراه اول برای ساخت دستیار هوشمند سازمانی. تیم ۱ تا ۴ نفره؛ ثبت‌نام تا ۱۳ آبان ۱۴۰۵؛ اختتامیه ۶ بهمن.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:site_name" content="هم‌ساز">
+  <meta property="og:title" content="هم‌ساز؛ از ایده تا توسعه دستیار هوشمند">
+  <meta property="og:description" content="با ایده یا محصولت وارد رقابت شو، با آموزش و منتورینگ توسعه‌اش بده و برای همکاری با همراه اول آماده شو. ثبت‌نام تا ۱۳ آبان.">
   <meta name="theme-color" content="#0A1424">
   <link rel="icon" href="assets/logos/hamsaz.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/IRANSansX-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,15 +26,15 @@
         <span class="brand__name">هم‌ساز</span>
       </a>
       <nav class="nav__links" id="navLinks">
-        <a href="#about">درباره</a>
+        <a href="#who">شرکت‌کنندگان</a>
         <a href="#tracks">حوزه‌ها</a>
         <a href="#timeline">مراحل</a>
-        <a href="#evaluation">ارزیابی</a>
-        <a href="#support">جوایز</a>
-        <a href="#faq">سوالات</a>
+        <a href="#support">حمایت‌ها</a>
+        <a href="#faq">سؤال‌ها</a>
         <a href="#" class="btn btn--primary btn--sm nav__cta" data-link="register">ثبت‌نام</a>
       </nav>
-      <button class="nav__burger" id="burger" aria-label="منو" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="nav__burger" id="burger" aria-label="منو" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <a href="#" class="btn btn--primary btn--sm nav__cta-mobile" data-link="register">ثبت‌نام</a>
     </div>
   </header>
 
@@ -38,30 +43,23 @@
     <section class="hero" id="top">
       <div class="container hero__inner">
         <div class="hero__text">
-          <div class="hero__name reveal"><b>هم‌ساز</b><span class="label-brick">رویداد ملی نوآوری باز</span></div>
-          <h1 class="hero__title reveal">مسابقه‌ی تیمی ساخت <em>محصول هوش مصنوعی</em> برای مسائل واقعی خدمات سازمانی همراه اول</h1>
-          <p class="hero__lead reveal">برای دانشجوها، توسعه‌دهنده‌ها، متخصصان و تیم‌های استارتاپی از سراسر کشور؛ تیم ۱ تا ۴ نفره، آنلاین، با ۸ هفته منتورینگ و دمو دی حضوری.</p>
+          <span class="label-brick reveal">رویداد نوآوری باز کوئرا و همراه اول</span>
+          <h1 class="hero__title reveal">هــــم‌ســــاز؛ از ایده تا<br><em>توسعه دستیار هوشمند</em></h1>
+          <p class="hero__lead reveal">با ایده یا محصولت وارد رقابت شو، با آموزش و منتورینگ توسعه‌اش بده و برای همکاری با همراه اول آماده شو.</p>
 
-          <!-- TODO: ساعت دقیق مهلت‌ها و دمو دی -->
           <dl class="key-dates reveal">
-            <div><dt>مهلت ثبت‌نام</dt><dd>۲۱ آبان</dd></div>
-            <div><dt>مهلت تحویل معرفی‌نامه</dt><dd>۲۱ آبان</dd></div>
-            <div><dt>دمو دی</dt><dd>۲۷ تا ۳۰ دی</dd></div>
+            <div><dt>تیم‌ها</dt><dd>۱ تا ۴ نفره</dd></div>
+            <div><dt>ثبت‌نام</dt><dd>تا ۱۳ آبان</dd></div>
+            <div><dt>اختتامیه</dt><dd>۶ بهمن</dd></div>
           </dl>
 
           <div class="hero__actions reveal">
-            <a href="#" class="btn btn--primary btn--lg" data-link="register">ثبت‌نام در مسابقه</a>
+            <!-- دکمه‌ی ثبت‌نام فقط وقتی LINKS.register در main.js پر شود فعال می‌شود -->
+            <a href="#" class="btn btn--primary btn--lg" data-link="register">ثبت‌نام در هم‌ساز</a>
+            <a href="#tracks" class="btn btn--ghost btn--lg">مشاهده‌ی حوزه‌ها</a>
           </div>
-          <span class="hero__alt reveal">تیم نداری؟ <a href="#" data-link="teamBot">با بات تلگرام هم‌تیمی پیدا کن</a></span>
+          <span class="hero__alt reveal">تیم نداری؟ <a href="#" data-link="teamBot">با بات تیم‌سازی هم‌تیمی پیدا کن</a></span>
 
-          <div class="partners reveal">
-            <span>برگزارکنندگان</span>
-            <div class="partners__logos">
-              <img src="assets/logos/quera.svg" alt="کوئرا" class="partners__quera logo-white">
-              <span class="partners__dot"></span>
-              <img src="assets/logos/hamrah-academy.svg" alt="مرکز نوآوری همراه اول" class="partners__hamrah logo-white">
-            </div>
-          </div>
         </div>
 
         <!-- LEGO rocket -->
@@ -132,48 +130,17 @@
           </svg>
         </div>
       </div>
-
-      <div class="container">
-        <ul class="infobar reveal">
-          <li>شرکت رایگان</li>
-          <li>تیم ۱ تا ۴ نفره</li>
-          <li>۸ هفته ساخت MVP با منتور</li>
-          <li>ارائه در دمو دی همراه اول</li>
-          <li>شتابدهی و ارزیابی سرمایه‌گذاری برای تیم‌های برتر</li>
-        </ul>
-      </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="label-brick">درباره رویداد</span>
-          <h2>از ایده تا محصول قابل‌نمایش</h2>
-          <p>هم‌ساز یه مسیر چندمرحله‌ای از ایده تا محصول اولیه‌ی قابل‌نمایش (MVP) است.</p>
+    <!-- ============ ORGANIZERS ============ -->
+    <section class="orgs" aria-label="برگزارکنندگان">
+      <div class="container orgs__inner">
+        <span class="orgs__label">برگزارکنندگان</span>
+        <div class="partners__logos">
+          <img src="assets/logos/quera.svg" alt="کوئرا" class="partners__quera logo-white">
+          <span class="partners__dot"></span>
+          <img src="assets/logos/hamrah-academy.svg" alt="مرکز نوآوری همراه اول" class="partners__hamrah logo-white">
         </div>
-
-        <div class="about-grid">
-          <article class="card reveal">
-            <span class="brick brick--cyan" style="--w:2"></span>
-            <h3>نوآوری باز</h3>
-            <p>حوزه‌ها و زیرمسئله‌ها نقش راهنما دارند، نه محدودکننده. ایده‌ی خود شما هم پذیرفته می‌شود.</p>
-          </article>
-          <article class="card reveal">
-            <span class="brick brick--blue" style="--w:2"></span>
-            <h3>آنلاین، به‌جز دمو دی</h3>
-            <p>همه‌ی مراحل آنلاین برگزار می‌شود. فقط دمو دی حضوری و در سالن همایش همراه اول است.</p>
-          </article>
-        </div>
-
-        <h3 class="subhead reveal">چرا شرکت کنم؟</h3>
-        <ul class="features reveal">
-          <li><span class="brick brick--cyan" style="--w:1"></span><b>مسئله‌ی واقعی</b><small>کار روی مسئله‌ی یک سازمان بزرگ</small></li>
-          <li><span class="brick brick--blue" style="--w:1"></span><b>منتور تخصصی</b><small>در هر حوزه از طرف همراه اول</small></li>
-          <li><span class="brick brick--teal" style="--w:1"></span><b>زیرساخت فنی رایگان</b><small>ماشین مجازی، GPU و اعتبار API</small></li>
-          <li><span class="brick brick--cyan" style="--w:1"></span><b>شتابدهی و سرمایه</b><small>مسیر شتابدهی و جذب سرمایه</small></li>
-          <li><span class="brick brick--slate" style="--w:1"></span><b>گواهی حضور</b><small>برای تیم‌های دوره‌ی توسعه</small></li>
-        </ul>
       </div>
     </section>
 
@@ -181,40 +148,32 @@
     <section class="section section--tint" id="who">
       <div class="container">
         <div class="section__head reveal">
-          <span class="label-brick">شرایط شرکت</span>
+          <span class="label-brick">شرکت‌کنندگان</span>
           <h2>چه کسانی می‌توانند شرکت کنند؟</h2>
-          <p>دانشجوها، فارغ‌التحصیل‌ها، توسعه‌دهنده‌ها، متخصصان و تیم‌های استارتاپی از سراسر کشور.</p>
+          <p>هر کسی که برای یک دستیار هوشمند سازمانی ایده، نمونه‌ی اولیه یا محصول دارد؛ تنها یا در تیم ۱ تا ۴ نفره.</p>
         </div>
 
-        <div class="who-grid">
-          <div class="who reveal">
-            <span class="brick-stack" aria-hidden="true">
-              <span class="brick brick--cyan" style="--w:1"></span>
-              <span class="brick brick--blue" style="--w:2"></span>
-            </span>
-            <div>
-              <h3>تیم ۱ تا ۴ نفره</h3>
-              <p>ثبت‌نام فردی هم ممکن است؛ تیم‌سازی از طریق بات تلگرام انجام می‌شود.</p>
-            </div>
-          </div>
-          <div class="who reveal">
-            <span class="brick-stack" aria-hidden="true">
-              <span class="brick brick--teal" style="--w:1"></span>
-              <span class="brick brick--cyan" style="--w:2"></span>
-            </span>
-            <div>
-              <h3>ترکیب پیشنهادی تیم</h3>
-              <p>نیروی فنی (هوش مصنوعی و توسعه) به‌علاوه‌ی نیروی محصول یا بیزینس. تجربه در یکی از حوزه‌ها، مثلاً مالی یا حقوقی، امتیاز است.</p>
-            </div>
-          </div>
-          <div class="who reveal">
-            <span class="brick brick--slate" style="--w:2"></span>
-            <div>
-              <h3>فقط یک تیم</h3>
-              <p>هر نفر فقط عضو یک تیم می‌تواند باشد.</p>
-            </div>
-          </div>
+        <div class="who-grid swipe">
+          <article class="card who reveal">
+            <span class="who__tag">اولویت اول</span>
+            <h3><span class="brick brick--cyan" style="--w:1" aria-hidden="true"></span>تیم دارای محصول</h3>
+            <p>محصولی با کاربر یا مشتری واقعی داری و می‌خواهی کاربرد سازمانی‌اش را توسعه بدهی.</p>
+          </article>
+          <article class="card who reveal">
+            <h3><span class="brick brick--blue" style="--w:1" aria-hidden="true"></span>تیم دارای نمونه‌ی اولیه</h3>
+            <p>نمونه‌ی کارکردی ساخته‌ای که هنوز مشتری ندارد و می‌خواهی کاملش کنی.</p>
+          </article>
+          <article class="card who reveal">
+            <h3><span class="brick brick--teal" style="--w:1" aria-hidden="true"></span>فرد یا تیم دارای ایده</h3>
+            <p>فقط ایده داری؟ تنها هم ثبت‌نام کن و با بات تیم‌سازی هم‌تیمی پیدا کن.</p>
+          </article>
         </div>
+
+        <ul class="pills reveal">
+          <li>هر فرد فقط عضو یک تیم</li>
+          <li>حداقل ۱۰ ساعت در هفته برای عضو اصلی</li>
+          <li>ثبت اولیه‌ی گروه تا ۱۵ آبان</li>
+        </ul>
       </div>
     </section>
 
@@ -222,42 +181,36 @@
     <section class="section" id="tracks">
       <div class="container">
         <div class="section__head reveal">
-          <span class="label-brick">حوزه‌ها و زیرمسئله‌ها</span>
-          <h2>مسائل خدمات سازمانی همراه اول</h2>
-          <p>زیرمسئله‌های نمونه‌ی هر حوزه در وبینار Reverse Pitch معرفی می‌شوند.</p>
+          <span class="label-brick">حوزه‌ها</span>
+          <h2>دستیارت را برای کدام حوزه می‌سازی؟</h2>
+          <p>هر حوزه یک صاحب مسئله در همراه اول دارد که روز افتتاحیه مسائلش را معرفی می‌کند.</p>
         </div>
 
-        <!-- TODO: شرح مسئله، ۲ تا ۴ زیرمسئله و خروجی مورد انتظار هر حوزه (از طرف همراه اول) -->
-        <div class="tracks">
-          <article class="card track reveal">
-            <span class="brick brick--blue" style="--w:2"></span>
-            <h3>مالی</h3>
-            <p class="track__soon">شرح مسئله و زیرمسئله‌ها به‌زودی</p>
+        <!-- TODO: پیوند دانلود کارت‌های چالش (PDF) وقتی فایل نهایی آماده شد -->
+        <div class="fields">
+          <article class="field reveal">
+            <h3><span class="brick brick--blue" style="--w:1" aria-hidden="true"></span>مالی و حسابداری</h3>
+            <p>مثلاً ساخت پیش‌نویس سند از روی فاکتور اسکن‌شده</p>
           </article>
-          <article class="card track reveal">
-            <span class="brick brick--teal" style="--w:2"></span>
-            <h3>منابع انسانی</h3>
-            <p class="track__soon">شرح مسئله و زیرمسئله‌ها به‌زودی</p>
+          <article class="field reveal">
+            <h3><span class="brick brick--teal" style="--w:1" aria-hidden="true"></span>منابع انسانی</h3>
+            <p>مثلاً پاسخ به پرسش‌های کارکنان درباره‌ی مرخصی و بیمه</p>
           </article>
-          <article class="card track reveal">
-            <span class="brick brick--cyan" style="--w:2"></span>
-            <h3>فروش</h3>
-            <p class="track__soon">شرح مسئله و زیرمسئله‌ها به‌زودی</p>
+          <article class="field reveal">
+            <h3><span class="brick brick--cyan" style="--w:1" aria-hidden="true"></span>فروش و توسعه‌ی کسب‌وکار</h3>
+            <p>مثلاً دستیار کارشناس فروش برای بسته‌ها و تعرفه‌ها</p>
           </article>
-          <article class="card track reveal">
-            <span class="brick brick--blue" style="--w:2"></span>
-            <h3>حقوقی</h3>
-            <p class="track__soon">شرح مسئله و زیرمسئله‌ها به‌زودی</p>
+          <article class="field reveal">
+            <h3><span class="brick brick--blue" style="--w:1" aria-hidden="true"></span>حقوقی و قراردادها</h3>
+            <p>مثلاً بررسی قرارداد و یافتن بندهای پرریسک</p>
           </article>
-          <article class="card track reveal">
-            <span class="brick brick--teal" style="--w:2"></span>
-            <h3>خدمات مشتری</h3>
-            <p class="track__soon">شرح مسئله و زیرمسئله‌ها به‌زودی</p>
+          <article class="field reveal">
+            <h3><span class="brick brick--teal" style="--w:1" aria-hidden="true"></span>خدمات مشتری</h3>
+            <p>مثلاً دسته‌بندی و تحلیل شکایات مشتریان</p>
           </article>
-          <article class="card track track--open reveal">
-            <span class="brick brick--slate" style="--w:2"></span>
-            <h3>سایر حوزه‌های خدمات سازمانی</h3>
-            <p>ایده‌های خوب خارج از زیرمسئله‌ها هم دیده می‌شوند.</p>
+          <article class="field field--open reveal">
+            <h3><span class="brick brick--slate" style="--w:1" aria-hidden="true"></span>سایر حوزه‌های سازمانی</h3>
+            <p>هر ایده‌ی دیگری که کاربرد سازمانی روشن داشته باشد</p>
           </article>
         </div>
       </div>
@@ -267,245 +220,94 @@
     <section class="section section--tint" id="timeline">
       <div class="container container--narrow">
         <div class="section__head reveal">
-          <span class="label-brick">مراحل و زمان‌بندی</span>
-          <h2>آجر به آجر تا دمو دی</h2>
+          <span class="label-brick">مراحل</span>
+          <h2>آجر به آجر تا اختتامیه</h2>
+          <p>همه‌ی مهلت‌ها ساعت ۲۳:۵۹ روز اعلام‌شده است.</p>
         </div>
 
         <ol class="timeline" id="timelineList">
           <li class="step reveal">
             <span class="step__num brick brick--blue" style="--w:2">۱</span>
-            <div><h3>ثبت‌نام، اطلاع‌رسانی و وبینار Reverse Pitch</h3><p>معرفی مسائل توسط همراه اول.</p></div>
-            <time>از ۱ آبان</time>
+            <div><h3>ثبت‌نام و تیم‌سازی</h3><p>ثبت‌نام تا ۱۳ آبان؛ ثبت اولیه‌ی گروه تا ۱۵ آبان.</p></div>
+            <time>۲ تا ۱۵ آبان</time>
           </li>
           <li class="step reveal">
             <span class="step__num brick brick--blue" style="--w:2">۲</span>
-            <div><h3>تیم‌سازی و آموزش‌های اولیه</h3><p>پیدا کردن تیم یا هم‌تیمی با بات تلگرام.</p></div>
-            <time>۱ تا ۲۱ آبان</time>
+            <div><h3>آموزش و ارسال معرفی‌نامه</h3><p>افتتاحیه، سه کارگاه آنلاین و نوشتن معرفی‌نامه‌ی ۹ پرسشی (حداکثر ۵ صفحه) تا ۱۳ آذر.</p></div>
+            <time>۱۶ آبان تا ۱۳ آذر</time>
           </li>
           <li class="step reveal">
             <span class="step__num brick brick--blue" style="--w:2">۳</span>
-            <div><h3>مهلت تحویل معرفی‌نامه</h3><p>ارسال معرفی‌نامه‌ی تیم بر اساس تمپلیت.</p></div>
-            <time>۲۱ آبان</time>
+            <div><h3>انتخاب ۳۰ تیم</h3><p>انتخاب با شش معیار از پیش اعلام‌شده؛ همه کارنامه و بازخورد مکتوب می‌گیرند.</p></div>
+            <time>۲۲ آذر</time>
           </li>
           <li class="step reveal">
             <span class="step__num brick brick--blue" style="--w:2">۴</span>
-            <div><h3>مسابقه‌ی انتخابی</h3><p>اعلام ۲۰ تا ۳۰ تیم راه‌یافته.</p></div>
-            <time>۲۲ تا ۲۸ آبان</time>
+            <div><h3>توسعه و منتورینگ</h3><p>ساخت نمونه‌ی اولیه‌ی قابل اجرا با ۵ جلسه منتورینگ؛ تحویل نهایی ۱۸ دی.</p></div>
+            <time>۲۳ آذر تا ۱۸ دی</time>
           </li>
           <li class="step reveal">
             <span class="step__num brick brick--blue" style="--w:2">۵</span>
-            <div><h3>دوره‌ی توسعه‌ی MVP با منتور</h3><p>۸ هفته ساخت محصول، همراه با کارگاه‌ها و منتورینگ.</p></div>
-            <time>۲۹ آبان تا ۲۴ دی</time>
-          </li>
-          <li class="step reveal">
-            <span class="step__num brick brick--blue" style="--w:2">۶</span>
-            <div><h3>ارزیابی میان‌دوره</h3><p>بررسی پیشرفت تیم‌ها در میانه‌ی دوره‌ی توسعه.</p></div>
-            <time>۲۰ تا ۲۶ آذر</time>
+            <div><h3>ارزیابی و انتخاب ۱۰ تیم</h3><p>اجرای محصول روی یک محیط سازمانی جدید و ارائه به هیئت داوران.</p></div>
+            <time>۱۹ تا ۲۶ دی</time>
           </li>
           <li class="step step--final reveal">
-            <span class="step__num brick brick--cyan" style="--w:2">۷</span>
-            <div><h3>انتخاب ۵ تیم برتر و دمو دی</h3><p>ارائه‌ی حضوری در سالن همایش همراه اول.</p></div>
-            <time>۲۷ تا ۳۰ دی</time>
+            <span class="step__num brick brick--cyan" style="--w:2">۶</span>
+            <div><h3>اختتامیه</h3><p>ارائه‌ی ۱۰ تیم نهایی در تهران و آغاز بررسی همکاری با همراه اول.</p></div>
+            <time>۶ بهمن</time>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ============ STAGE 1 ============ -->
-    <section class="section" id="stage1">
+    <!-- ============ SUPPORT ============ -->
+    <section class="section" id="support">
       <div class="container">
         <div class="section__head reveal">
-          <span class="label-brick">مرحله‌ی اول</span>
-          <h2>تیم‌سازی و معرفی‌نامه</h2>
+          <span class="label-brick">حمایت‌ها</span>
+          <h2>چه چیزی به دست می‌آوری؟</h2>
         </div>
 
-        <div class="stage-grid">
-          <article class="card stage reveal">
-            <span class="brick brick--cyan" style="--w:2"></span>
-            <h3>تیم‌سازی</h3>
-            <ul class="stage__list">
-              <li>تیم هستی؟ عضو پیدا کن.</li>
-              <li>تنهایی؟ تیم یا هم‌تیمی پیدا کن.</li>
-              <li>ثبت‌نام نهایی تیم در کوئرا انجام می‌شود.</li>
-            </ul>
-            <a href="#" class="btn btn--ghost" data-link="teamBot">ورود به بات تلگرام</a>
-          </article>
-
-          <article class="card stage reveal">
-            <span class="brick brick--blue" style="--w:2"></span>
-            <h3>معرفی‌نامه</h3>
-            <!-- TODO: فرمت، حداکثر حجم/صفحه، روش ارسال و ساعت دقیق مهلت -->
-            <dl class="stage__facts">
-              <div><dt>مهلت</dt><dd>۲۱ آبان</dd></div>
-              <div><dt>فرمت و حجم</dt><dd>به‌زودی</dd></div>
-              <div><dt>روش ارسال</dt><dd>به‌زودی</dd></div>
-            </dl>
-            <a href="#" class="btn btn--ghost" data-link="template">دانلود تمپلیت معرفی‌نامه</a>
-          </article>
-        </div>
-
-        <!-- TODO: فهرست کارگاه‌های آموزش اولیه با تاریخ و لینک -->
-        <p class="note reveal">فهرست کارگاه‌های آموزش اولیه، با تاریخ و لینک، به‌زودی اعلام می‌شود.</p>
-      </div>
-    </section>
-
-    <!-- ============ EVALUATION ============ -->
-    <section class="section section--tint" id="evaluation">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="label-brick">معیارهای ارزیابی</span>
-          <h2>چطور ارزیابی می‌شویم؟</h2>
-          <p>داوری توسط کوئرا، همراه اول و متخصصان حوزه انجام می‌شود.</p>
-        </div>
-
-        <!-- TODO: وزن هر معیار -->
-        <div class="eval-grid">
-          <article class="card eval reveal">
-            <span class="eval__step">۱</span>
-            <h3>ارزیابی معرفی‌نامه</h3>
-            <ul class="tick-list">
-              <li>شناخت مسئله</li>
-              <li>راه‌حل و نقش هوش مصنوعی در آن</li>
-              <li>امکان‌پذیری فنی</li>
-              <li>ارزش برای سازمان یا بازار</li>
-              <li>ترکیب تیم</li>
-            </ul>
-          </article>
-          <article class="card eval reveal">
-            <span class="eval__step">۲</span>
-            <h3>مسابقه‌ی انتخابی</h3>
-            <ul class="tick-list">
-              <li>اول فیلتر حداقل امتیاز فنی</li>
-              <li>بعد ارزیابی ایده و مدل کسب‌وکار</li>
-              <li>با حضور نمایندگان همراه اول در داوری</li>
-            </ul>
-          </article>
-          <article class="card eval reveal">
-            <span class="eval__step">۳</span>
-            <h3>دوره‌ی توسعه</h3>
-            <ul class="tick-list">
-              <li>انطباق MVP با معرفی‌نامه</li>
-              <li>ارزیابی منتورها</li>
-              <li>نتیجه‌ی ارزیابی میان‌دوره و پایانی</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ TRAINING & RESOURCES ============ -->
-    <section class="section" id="resources">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="label-brick">آموزش، منتورینگ و منابع</span>
-          <h2>هر چیزی که برای ساختن لازم داری</h2>
-        </div>
-
-        <div class="res-grid">
-          <article class="card reveal">
-            <span class="brick brick--cyan" style="--w:2"></span>
-            <h3>کارگاه‌های دوره‌ی توسعه</h3>
-            <ul class="chips">
-              <li>Low-code و No-code</li>
-              <li>مهارت‌های نرم</li>
-              <li>کسب‌وکار</li>
-              <li>ارائه به سرمایه‌گذار</li>
-            </ul>
-          </article>
-          <article class="card reveal">
-            <span class="brick brick--blue" style="--w:2"></span>
-            <h3>منتورها</h3>
-            <!-- TODO: نام و تصویر منتورها -->
-            <p>منتور تخصصی هر حوزه از طرف همراه اول.</p>
-          </article>
-          <article class="card reveal">
-            <span class="brick brick--teal" style="--w:2"></span>
-            <h3>منابع فنی تیم‌های راه‌یافته</h3>
-            <ul class="chips">
-              <li>ماشین مجازی</li>
-              <li>GPU (Colab Pro یا ابر فردوسی)</li>
-              <li>اعتبار API</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SUPPORT FOR TOP TEAMS ============ -->
-    <section class="section section--tint" id="support">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="label-brick">جوایز و حمایت</span>
-          <h2>حمایت از تیم‌های برتر</h2>
-          <p>به‌جای جایزه‌ی نقدی، تیم‌های برتر وارد مسیر شتابدهی و سرمایه‌گذاری همراه اول می‌شوند.</p>
-        </div>
-
-        <div class="podium">
-          <div class="podium__col reveal">
-            <p class="podium__label">همه‌ی تیم‌های دوره‌ی توسعه</p>
-            <div class="podium__stack">
-              <span class="brick brick--teal"><em>۲۰+</em></span>
+        <!-- TODO: جوایز احتمالی و میزان اعتبار ابری و API پس از تصمیم همراه اول -->
+        <div class="tiers swipe">
+          <div class="tier reveal">
+            <div class="tier__stack" aria-hidden="true">
+              <span class="brick brick--teal"><em>همه</em></span>
             </div>
-            <p class="podium__desc">گواهی حضور و جلسه‌ی معرفی به بازوهای سرمایه‌گذاری همراه اول</p>
+            <h3>همه‌ی شرکت‌کنندگان</h3>
+            <ul class="tick-list">
+              <li>سه کارگاه و دسترسی به ضبط همه‌ی کارگاه‌ها</li>
+              <li>کارنامه با بازخورد مکتوب داوران</li>
+              <li>گواهی آموزش</li>
+            </ul>
           </div>
-          <div class="podium__col podium__col--1 reveal">
-            <p class="podium__label">تیم‌های اول تا سوم</p>
-            <div class="podium__stack">
-              <span class="brick brick--cyan"></span>
-              <span class="brick brick--cyan"></span>
-              <span class="brick brick--cyan"><em>۳</em></span>
-            </div>
-            <p class="podium__desc">ورود به برنامه‌ی شتابدهی همراه اول و ارزیابی برای سرمایه‌گذاری بذری؛ تیم اول در این ارزیابی اولویت دارد.</p>
-          </div>
-          <div class="podium__col reveal">
-            <p class="podium__label">۵ تیم فینالیست</p>
-            <div class="podium__stack">
+          <div class="tier reveal">
+            <div class="tier__stack" aria-hidden="true">
               <span class="brick brick--blue"></span>
-              <span class="brick brick--blue"><em>۵</em></span>
+              <span class="brick brick--blue"><em>۳۰</em></span>
             </div>
-            <p class="podium__desc">ارائه در دمو دی جلوی مدیران و سرمایه‌گذاران</p>
+            <h3>۳۰ تیم منتخب</h3>
+            <ul class="tick-list">
+              <li>۵ جلسه منتورینگ صنعت، AI و کسب‌وکار</li>
+              <li>دو کارگاه تخصصی زنده</li>
+              <li>گزارش فنی از ارزیابی محصول</li>
+            </ul>
+          </div>
+          <div class="tier tier--top reveal">
+            <div class="tier__stack" aria-hidden="true">
+              <span class="brick brick--cyan"></span>
+              <span class="brick brick--cyan"></span>
+              <span class="brick brick--cyan"><em>۱۰</em></span>
+            </div>
+            <h3>۱۰ تیم نهایی</h3>
+            <ul class="tick-list">
+              <li>ارائه روی صحنه‌ی اختتامیه</li>
+              <li>یک حامی مشخص در همراه اول</li>
+              <li>فرصت مذاکره برای پایلوت</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ RULES ============ -->
-    <section class="section" id="rules">
-      <div class="container container--narrow">
-        <div class="section__head reveal">
-          <span class="label-brick">قوانین</span>
-          <h2>قوانین رویداد</h2>
-        </div>
-
-        <!-- TODO: مالکیت فکری، تغییر اعضای تیم، هزینه‌ی سفر فینالیست‌ها و شرط سنی هنوز نهایی نشده‌اند -->
-        <ul class="rules reveal">
-          <li><b>محرمانگی:</b> اگر همراه اول داده یا اطلاعات داخلی در اختیار تیم‌ها بگذارد، تعهد عدم افشا لازم است.</li>
-          <li><b>استفاده از ابزارها:</b> استفاده از کد متن‌باز، مدل‌های آماده و APIهای LLM مجاز است.</li>
-          <li><b>تعهد به حضور:</b> حضور در ارزیابی‌ها و دمو دی الزامی است.</li>
-          <li><b>رد صلاحیت:</b> کپی، تقلب یا ارائه‌ی کار دیگران باعث رد صلاحیت می‌شود.</li>
-        </ul>
-        <p class="rules__more reveal"><a href="#" data-link="rules">مشاهده‌ی قوانین کامل رویداد ←</a></p>
-      </div>
-    </section>
-
-    <!-- ============ TRACK RECORD ============ -->
-    <section class="section section--tint" id="record">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="label-brick">برگزارکنندگان</span>
-          <h2>کوئرا و مرکز نوآوری همراه اول</h2>
-        </div>
-        <div class="org-logos reveal">
-          <img src="assets/logos/quera.svg" alt="کوئرا" class="logo-white">
-          <span aria-hidden="true"></span>
-          <img src="assets/logos/hamrah-academy.svg" alt="مرکز نوآوری همراه اول" class="logo-white">
-        </div>
-        <p class="records__intro reveal">سابقه‌ی کوئرا در برگزاری رویدادهای ملی:</p>
-        <dl class="records reveal">
-          <div><dt>نواتک</dt><dd><b>۱,۱۹۶</b> شرکت‌کننده · ۱۸۲ تیم · از ۱۲ استان</dd></div>
-          <div><dt>MOGS AI (مپنا)</dt><dd><b>+۱۰۰۰</b> شرکت‌کننده</dd></div>
-          <div><dt>هکاتون LLM فارسی</dt><dd><b>۱,۰۹۸</b> شرکت‌کننده</dd></div>
-        </dl>
+        <p class="fine reveal">مالکیت ایده، کد و محصول با خود تیم است. همکاری پس از رویداد به مذاکره بستگی دارد و قرارداد یا سرمایه‌گذاری تضمین نمی‌شود.</p>
       </div>
     </section>
 
@@ -513,52 +315,34 @@
     <section class="section section--tint" id="faq">
       <div class="container container--narrow">
         <div class="section__head reveal">
-          <span class="label-brick">سوالات متداول</span>
-          <h2>سوالی داری؟</h2>
+          <span class="label-brick">سؤال‌های پرتکرار</span>
+          <h2>سؤالی داری؟</h2>
         </div>
 
         <div class="faq">
           <details class="qa reveal">
-            <summary>فردی یا تیمی؟ تیم ندارم، چه کنم؟</summary>
-            <p>هر دو ممکن است. تیم‌ها ۱ تا ۴ نفره‌اند. اگر تیم نداری، فردی ثبت‌نام کن و با بات تلگرام تیم یا هم‌تیمی پیدا کن. ثبت‌نام نهایی تیم در کوئرا انجام می‌شود.</p>
+            <summary>تیم ندارم؛ می‌توانم شرکت کنم؟</summary>
+            <p>بله. تنها ثبت‌نام کن و با بات تیم‌سازی هم‌تیمی پیدا کن، یا اگر بخواهی تنها ادامه بده.</p>
           </details>
           <details class="qa reveal">
-            <summary>ایده ندارم، می‌توانم شرکت کنم؟</summary>
-            <p>بله. مسائل همراه اول در وبینار Reverse Pitch معرفی می‌شوند و زیرمسئله‌های هر حوزه نقطه‌ی شروع خوبی برای ایده‌پردازی است.</p>
+            <summary>فقط ایده دارم؛ شانسی دارم؟</summary>
+            <p>بله. ایده، نمونه‌ی اولیه و محصول موجود هر سه پذیرفته می‌شوند. اولویت تیم دارای محصول فقط از راه معیارهای ارزیابی اعمال می‌شود و ایده‌ی قوی با شواهد مسئله شانس واقعی دارد.</p>
           </details>
           <details class="qa reveal">
-            <summary>اگر ایده‌ام در هیچ حوزه‌ای نیست چه کنم؟</summary>
-            <p>هم‌ساز بر پایه‌ی نوآوری باز است؛ حوزه‌ها راهنما هستند، نه محدودکننده. ایده‌های خوب در سایر حوزه‌های خدمات سازمانی هم دیده می‌شوند.</p>
+            <summary>چقدر زمان لازم است؟</summary>
+            <p>عضو اصلی هر تیم دست‌کم ۱۰ ساعت در هفته، از ۱۶ آبان تا پایان مسیر.</p>
           </details>
           <details class="qa reveal">
-            <summary>آیا هزینه دارد؟ چقدر زمان در هفته لازم است؟</summary>
-            <!-- TODO: زمان لازم در هفته -->
-            <p>شرکت در رویداد رایگان است. زمان تقریبی لازم در هفته به‌زودی اعلام می‌شود.</p>
+            <summary>آنلاین است یا حضوری؟</summary>
+            <p>آموزش و ارزیابی معرفی‌نامه آنلاین است. افتتاحیه (۱۶ آبان) حضوری با ظرفیت محدود است و پخش زنده دارد. فقط ۱۰ تیم نهایی باید در اختتامیه‌ی تهران حاضر شوند.</p>
           </details>
           <details class="qa reveal">
-            <summary>آیا حضور در محل لازم است؟</summary>
-            <p>نه. همه‌ی مراحل آنلاین است، به‌جز دمو دی که حضوری و در سالن همایش همراه اول برگزار می‌شود.</p>
+            <summary>می‌توانم از مدل‌ها و ابزارهای آماده استفاده کنم؟</summary>
+            <p>بله، به شرط اینکه در معرفی‌نامه و تحویل نهایی اعلام شوند. فقط استفاده از داده‌ی واقعی مشتریان ممنوع است.</p>
           </details>
           <details class="qa reveal">
-            <summary>آیا باید برنامه‌نویس باشم؟</summary>
-            <p>نه لزوماً. ترکیب پیشنهادی تیم، نیروی فنی (هوش مصنوعی و توسعه) به‌علاوه‌ی نیروی محصول یا بیزینس است و تجربه در حوزه‌هایی مثل مالی یا حقوقی هم امتیاز دارد.</p>
-          </details>
-          <details class="qa reveal">
-            <summary>مالکیت ایده و کد با کیست؟</summary>
-            <!-- TODO: پاسخ مالکیت فکری -->
-            <p>جزئیات مالکیت فکری در قوانین رویداد اعلام می‌شود.</p>
-          </details>
-          <details class="qa reveal">
-            <summary>بعد از رویداد چه اتفاقی می‌افتد؟</summary>
-            <p>تیم‌های اول تا سوم وارد برنامه‌ی شتابدهی همراه اول می‌شوند و برای سرمایه‌گذاری بذری ارزیابی می‌شوند. همه‌ی تیم‌های دوره‌ی توسعه هم به بازوهای سرمایه‌گذاری همراه اول معرفی می‌شوند.</p>
-          </details>
-          <details class="qa reveal">
-            <summary>چه مدرکی می‌گیرم؟</summary>
-            <p>همه‌ی تیم‌های دوره‌ی توسعه گواهی حضور دریافت می‌کنند.</p>
-          </details>
-          <details class="qa reveal">
-            <summary>سؤال دارم، از کجا بپرسم؟</summary>
-            <p>از طریق <a href="#" data-link="supportTelegram">تلگرام پشتیبانی</a> یا <a href="#" data-link="supportEmail">ایمیل</a> با ما در تماس باش.</p>
+            <summary>سؤال دیگری دارم؛ از کجا بپرسم؟</summary>
+            <p>از <a href="#" data-link="supportTelegram">پشتیبانی در تلگرام</a> یا <a href="#" data-link="supportEmail">ایمیل</a> بپرس، یا <a href="#" data-link="rules">آیین‌نامه‌ی کامل</a> را بخوان.</p>
           </details>
         </div>
       </div>
@@ -570,8 +354,8 @@
     <div class="container">
       <div class="cta reveal">
         <h2>ایده‌ت منتظر یه تیمه!</h2>
-        <p>ثبت‌نام فردی یا تیمی در کوئرا انجام می‌شود. مهلت ثبت‌نام: ۲۱ آبان</p>
-        <a href="#" class="btn btn--primary btn--lg" data-link="register">ثبت‌نام در مسابقه</a>
+        <p>ثبت‌نام فردی یا تیمی تا ۱۳ آبان، ساعت ۲۳:۵۹.</p>
+        <a href="#" class="btn btn--primary btn--lg" data-link="register">ثبت‌نام در هم‌ساز</a>
       </div>
       <div class="footer__grid">
         <div>
@@ -585,7 +369,7 @@
           </div>
         </div>
         <ul class="footer__links">
-          <li><a href="#" data-link="rules">قوانین</a></li>
+          <li><a href="#" data-link="rules">آیین‌نامه</a></li>
           <li><a href="#" data-link="privacy">حریم خصوصی</a></li>
           <li><a href="#" data-link="channel">کانال اطلاع‌رسانی</a></li>
         </ul>
@@ -594,8 +378,14 @@
           <li><a href="#" data-link="supportEmail">ایمیل پشتیبانی</a></li>
         </ul>
       </div>
+      <p class="footer__updated">آخرین به‌روزرسانی: ۹ آبان ۱۴۰۵</p>
     </div>
   </footer>
+
+  <!-- دکمه‌ی ثابت ثبت‌نام در موبایل؛ فقط وقتی لینک ثبت‌نام تنظیم شده باشد نمایش داده می‌شود -->
+  <div class="sticky-cta" id="stickyCta" hidden>
+    <a href="#" class="btn btn--primary btn--block" data-link="register">ثبت‌نام در هم‌ساز · تا ۱۳ آبان</a>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

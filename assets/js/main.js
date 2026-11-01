@@ -9,8 +9,8 @@
 const LINKS = {
   register: '',         // صفحه‌ی ثبت‌نام رویداد در کوئرا
   teamBot: '',          // بات تلگرام تیم‌سازی
-  template: '',         // فایل تمپلیت معرفی‌نامه
-  rules: '',            // صفحه‌ی قوانین
+  template: '',         // فایل قالب معرفی‌نامه (Word یا PDF)؛ تا خالی است دکمه‌ی دانلود غیرفعال می‌ماند
+  rules: '',            // آیین‌نامه‌ی کامل رویداد
   privacy: '',          // صفحه‌ی حریم خصوصی
   channel: '',          // کانال اطلاع‌رسانی رویداد
   supportTelegram: '',  // آیدی تلگرام پشتیبانی، مثلاً https://t.me/...
@@ -55,6 +55,9 @@ const REGISTER_UTM = {
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
 
+  /* ---------- راهنمای کارت‌های کشیدنی در موبایل ---------- */
+  $$('.swipe').forEach((el) => el.insertAdjacentHTML('afterend', '<p class="swipe-hint" aria-hidden="true">برای دیدن بقیه، کارت‌ها را بکش</p>'));
+
   /* ---------- reveal on scroll ---------- */
   const revealIO = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -92,7 +95,18 @@ const REGISTER_UTM = {
   });
 
   /* ---------- FAQ: one open at a time ---------- */
-  $$('.qa').forEach((d) => d.addEventListener('toggle', () => {
-    if (d.open) $$('.qa').forEach((o) => { if (o !== d) o.open = false; });
+  const faqs = $$('.faq .qa');
+  faqs.forEach((d) => d.addEventListener('toggle', () => {
+    if (d.open) faqs.forEach((o) => { if (o !== d) o.open = false; });
   }));
+
+  /* بخش‌های بازشونده ارتفاع صفحه را عوض می‌کنند؛ نوار پیشرفت زمان‌بندی دوباره حساب شود */
+  $$('details').forEach((d) => d.addEventListener('toggle', onScroll));
+
+  /* ---------- دکمه‌ی ثابت ثبت‌نام در موبایل (فقط با لینک واقعی) ---------- */
+  const sticky = $('#stickyCta');
+  if (sticky && LINKS.register) {
+    sticky.hidden = false;
+    document.body.classList.add('has-sticky');
+  }
 })();
