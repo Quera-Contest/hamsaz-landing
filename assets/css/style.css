@@ -122,8 +122,7 @@ b { color: #fff; }
 .nav.is-scrolled { background: rgba(10, 20, 36, .85); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); padding: 8px 0; }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .55rem; }
-.brand__mark { width: 34px; height: 34px; }
-.brand__name { font-weight: 700; font-size: 1.3rem; color: #fff; }
+.brand__logo { height: 40px; width: auto; }
 .nav__links { display: flex; align-items: center; justify-content: flex-start; gap: .2rem; flex: 1; margin-inline-start: 1.5rem; }
 .nav__links a:not(.btn) { font-weight: 500; font-size: .95rem; padding: .35rem .8rem; border-radius: 6px; color: var(--muted); transition: color .2s, background .2s; }
 .nav__links a:not(.btn):hover { color: #fff; background: rgba(255, 255, 255, .05); }

@@ -9,7 +9,7 @@
 index.html            صفحه
 assets/css/style.css  استایل‌ها
 assets/js/main.js     لینک‌ها، UTM و انیمیشن‌ها
-assets/logos/         لوگوها (hamsaz.svg موقته)
+assets/logos/         لوگوها (هم‌ساز و مرکز نوآوری همراه اول از پوستر رویداد)
 assets/fonts/         فونت ایران‌سنس X
 ```
 
