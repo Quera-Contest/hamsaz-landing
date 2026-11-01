@@ -766,3 +766,5 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
+
+.step--webinar h3 { color: var(--cyan); }
