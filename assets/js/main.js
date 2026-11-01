@@ -3,14 +3,12 @@
    ========================================================= */
 
 /* ---------- لینک‌ها ----------
-   هر لینکی که اینجا خالی باشه، توی صفحه با برچسب «به‌زودی» و غیرفعال نشون داده می‌شه.
-   register: صفحه‌ی ثبت‌نام رویداد در کوئرا (مثلاً https://quera.org/events/...).
+   هر عنصری با data-link="کلید" به لینک متناظر اینجا وصل می‌شه.
    پارامترهای UTM زیر خودکار به لینک ثبت‌نام اضافه می‌شن. */
 const LINKS = {
-  register: '',         // صفحه‌ی ثبت‌نام رویداد در کوئرا
-  teamBot: 'https://t.me/HamsazTeamBot',        // بات تلگرام تیم‌سازی
-  rules: '',            // آیین‌نامه‌ی کامل رویداد
-  supportTelegram: 'https://t.me/quera_info',    // پشتیبانی تلگرام
+  register: 'https://quera.org/events/hamsaz1/register',  // صفحه‌ی ثبت‌نام رویداد در کوئرا
+  teamBot: 'https://t.me/HamsazTeamBot',                   // بات تلگرام تیم‌سازی
+  supportTelegram: 'https://t.me/quera_info',              // پشتیبانی تلگرام
 };
 
 const REGISTER_UTM = {
@@ -27,18 +25,21 @@ const REGISTER_UTM = {
   const nav = $('#nav');
   const burger = $('#burger');
   const links = $('#navLinks');
-  const closeMenu = () => { links.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); };
-  burger.addEventListener('click', () => {
-    const open = links.classList.toggle('is-open');
-    burger.setAttribute('aria-expanded', String(open));
-  });
-  $$('a', links).forEach((a) => a.addEventListener('click', closeMenu));
+  if (burger && links) {
+    const closeMenu = () => { links.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); };
+    burger.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    $$('a', links).forEach((a) => a.addEventListener('click', closeMenu));
+  }
 
   /* ---------- scroll: nav state + timeline progress ---------- */
   const timeline = $('#timelineList');
-  const steps = $$('.step', timeline);
+  const steps = timeline ? $$('.step', timeline) : [];
   const onScroll = () => {
-    nav.classList.toggle('is-scrolled', window.scrollY > 20);
+    if (nav) nav.classList.toggle('is-scrolled', window.scrollY > 20);
+    if (!timeline) return;
     const r = timeline.getBoundingClientRect();
     const mid = window.innerHeight * 0.6;
     timeline.style.setProperty('--p', Math.max(0, Math.min(1, (mid - r.top) / r.height)).toFixed(3));
@@ -99,7 +100,7 @@ const REGISTER_UTM = {
   /* بخش‌های بازشونده ارتفاع صفحه را عوض می‌کنند؛ نوار پیشرفت زمان‌بندی دوباره حساب شود */
   $$('details').forEach((d) => d.addEventListener('toggle', onScroll));
 
-  /* ---------- دکمه‌ی ثابت ثبت‌نام در موبایل (فقط با لینک واقعی) ---------- */
+  /* ---------- دکمه‌ی ثابت ثبت‌نام در موبایل ---------- */
   const sticky = $('#stickyCta');
   if (sticky && LINKS.register) {
     sticky.hidden = false;
