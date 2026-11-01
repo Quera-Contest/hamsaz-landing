@@ -8,13 +8,9 @@
    پارامترهای UTM زیر خودکار به لینک ثبت‌نام اضافه می‌شن. */
 const LINKS = {
   register: '',         // صفحه‌ی ثبت‌نام رویداد در کوئرا
-  teamBot: '',          // بات تلگرام تیم‌سازی
-  template: '',         // فایل قالب معرفی‌نامه (Word یا PDF)؛ تا خالی است دکمه‌ی دانلود غیرفعال می‌ماند
+  teamBot: 'https://t.me/HamsazTeamBot',        // بات تلگرام تیم‌سازی
   rules: '',            // آیین‌نامه‌ی کامل رویداد
-  privacy: '',          // صفحه‌ی حریم خصوصی
-  channel: '',          // کانال اطلاع‌رسانی رویداد
-  supportTelegram: '',  // آیدی تلگرام پشتیبانی، مثلاً https://t.me/...
-  supportEmail: '',     // ایمیل پشتیبانی، مثلاً mailto:support@...
+  supportTelegram: 'https://t.me/quera_info',    // پشتیبانی تلگرام
 };
 
 const REGISTER_UTM = {
