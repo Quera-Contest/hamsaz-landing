@@ -783,3 +783,8 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
   .sponsors__logos li { width: calc((100% - 1.2rem) / 3); height: 104px; }
   .sponsors__logos img { height: 64px; max-width: 86%; object-fit: contain; }
 }
+
+/* مثال‌های هر حوزه */
+.field__ex { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: .35rem; }
+.field__ex li { position: relative; padding-inline-start: 1rem; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+.field__ex li::before { content: ""; position: absolute; inset-inline-start: 0; top: .72em; width: 6px; height: 6px; border-radius: 2px; background: var(--cyan); opacity: .6; }
