@@ -772,14 +772,12 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
 /* ---------- حامیان ---------- */
 .sponsors { border-top: 1px solid var(--line); padding-block: 64px 72px; }
 .sponsors .section__head { margin-bottom: 2rem; }
-.sponsors__logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
-.sponsors__logos li { display: grid; place-items: center; width: 200px; height: 140px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: border-color .25s; }
-.sponsors__logos li:hover { border-color: rgba(145, 222, 243, .35); }
-.sponsors__logos img { height: 92px; width: auto; opacity: .88; transition: opacity .25s; }
-.sponsors__logos li:hover img { opacity: 1; }
+.sponsors__logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.sponsors__logos li { display: flex; align-items: center; justify-content: center; box-sizing: border-box; overflow: hidden; width: 190px; height: 150px; padding: 16px; background: #fff; border-radius: 14px; box-shadow: 0 6px 20px rgba(0, 0, 0, .25); transition: transform .25s; }
+.sponsors__logos li:hover { transform: translateY(-3px); }
+.sponsors__logos img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; }
 @media (max-width: 600px) {
   .sponsors { padding-block: 48px 56px; }
   .sponsors__logos { gap: .6rem; }
-  .sponsors__logos li { width: calc((100% - 1.2rem) / 3); height: 104px; }
-  .sponsors__logos img { height: 64px; max-width: 86%; object-fit: contain; }
+  .sponsors__logos li { width: calc((100% - 1.2rem) / 3); height: 110px; padding: 10px; }
 }
