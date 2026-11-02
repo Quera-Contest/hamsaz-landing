@@ -9,7 +9,7 @@
 index.html            صفحه
 assets/css/style.css  استایل‌ها
 assets/js/main.js     لینک‌ها، UTM و انیمیشن‌ها
-assets/logos/         لوگوها (SVG؛ هم‌ساز بازسازی‌شده از پوستر، همراه اول از سایت mci.ir)
+assets/logos/         لوگوها (SVG؛ هم‌ساز بازسازی‌شده از پوستر، همراه اول از سایت mci.ir؛ حامیان PNG سفید و شفاف)
 assets/fonts/         فونت ایران‌سنس X
 ```
 
