@@ -135,7 +135,7 @@ b { color: #fff; }
 .hero {
   position: relative; padding: 104px 0 48px; overflow: hidden;
   /* هیرو تا پایین نمای اول کشیده می‌شود تا نوار برگزارکنندگان درست زیر آن، در لبه‌ی پایین صفحه، دیده شود */
-  min-height: calc(100svh - var(--orgs-h, 100px)); display: flex; flex-direction: column; justify-content: center;
+  min-height: calc(100svh - var(--orgs-h, 128px)); display: flex; flex-direction: column; justify-content: center;
   background:
     radial-gradient(700px 420px at 20% 30%, rgba(145, 222, 243, .14), transparent 70%),
     radial-gradient(600px 400px at 85% 10%, rgba(4, 109, 226, .18), transparent 70%),
@@ -151,15 +151,16 @@ b { color: #fff; }
 }
 .hero__inner { position: relative; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 3rem; align-items: center; }
 .hero__title {
-  font-size: clamp(2.1rem, 5vw, 3.25rem); font-weight: 700; line-height: 1.4; white-space: nowrap;
-  margin: 1.1rem 0 .9rem; color: #fff;
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem); font-weight: 700; line-height: 1.5; white-space: nowrap;
+  margin: .5rem 0 .9rem; color: #fff;
 }
 .hero .label-brick { font-weight: 400; }
-.hero__title em {
-  font-style: normal; color: var(--cyan);
+.hero__slogan {
+  font-size: clamp(2.5rem, 5.6vw, 3.9rem); font-weight: 700; line-height: 1.3; white-space: nowrap; margin-top: 1.1rem;
   background: linear-gradient(270deg, var(--cyan-l) 0%, var(--cyan) 40%, var(--blue-l) 100%);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
+.hero__title em { font-style: normal; color: var(--cyan); }
 .hero__alt { display: inline-block; margin-top: 1rem; color: var(--muted); font-size: 13px; }
 .hero__alt a { color: var(--cyan); text-decoration: underline; text-underline-offset: 4px; }
 .hero__lead { font-size: 1.125rem; color: var(--muted); max-width: 34rem; }
@@ -169,18 +170,11 @@ b { color: #fff; }
 .orgs__label { color: var(--muted); font-size: .85rem; }
 .partners__logos { display: flex; align-items: center; gap: 1.6rem; }
 .partners__quera { height: 26px; width: auto; }
-.partners__hamrah { height: 46px; width: auto; }
-.partners__dot { width: 1px; height: 34px; background: var(--line-2); }
+.partners__hamrah { height: 76px; width: auto; }
+.partners__dot { width: 1px; height: 44px; background: var(--line-2); }
 
 .hero__visual { display: grid; place-items: center end; } /* در RTL یعنی چسبیده به لبه‌ی چپ گرید */
-.rocket-svg { width: min(300px, 100%); height: auto; overflow: visible; filter: drop-shadow(0 30px 40px rgba(145, 222, 243, .12)); }
-.rocket { animation: hover 3.5s ease-in-out infinite; }
-@keyframes hover { 50% { transform: translateY(-10px); } }
-.flame { transform-box: fill-box; transform-origin: top center; animation: flame .35s ease-in-out infinite alternate; }
-@keyframes flame { to { transform: scaleY(.8) scaleX(.92); } }
-.float-a { animation: float 6s ease-in-out infinite; opacity: .9; }
-.float-b { animation: float 5s ease-in-out infinite reverse; opacity: .9; }
-@keyframes float { 50% { transform: translateY(-8px); } }
+.hero__art { display: block; width: 100%; max-width: 620px; height: auto; filter: drop-shadow(0 26px 44px rgba(4, 109, 226, .28)); }
 
 /* ---------- sections ---------- */
 .section { padding: 84px 0; }
@@ -250,7 +244,9 @@ b { color: #fff; }
 .footer__orgs a { transition: opacity .2s; }
 .footer__orgs a:hover img { opacity: 1; }
 .footer__orgs img { height: 22px; width: auto; }
-.footer__orgs a + a img { height: 38px; }
+.footer__orgs a:first-child img { height: 38px; }
+.footer .brand { order: 0; }
+.footer .brand__logo { height: 100px; }
 
 /* ---------- content blocks added from the event brief ---------- */
 .key-dates { display: flex; flex-wrap: wrap; align-items: center; row-gap: .4rem; margin-top: 1.4rem; }
@@ -573,11 +569,11 @@ b { color: #fff; }
   .hero__text { display: contents; }
   .hero__inner { gap: 0; justify-items: center; }
   .hero__inner > * , .hero__text > * { order: 5; }
-  .hero__text > .label-brick { order: 1; }
+  .hero__text > .label-brick, .hero__text > .hero__slogan { order: 1; }
   .hero__text > .hero__title { order: 2; }
   .hero__text > .hero__lead { order: 3; }
   .hero__visual { order: 4; display: grid; place-items: center; margin-top: 1.2rem; }
-  .rocket-svg { width: 170px; filter: drop-shadow(0 16px 24px rgba(145, 222, 243, .12)); }
+  .hero__art { width: min(420px, 100%); }
   .hero__actions { width: 100%; }
 }
 @media (max-width: 760px) {
@@ -588,10 +584,11 @@ b { color: #fff; }
   .nav__burger span { margin: 4px 0; }
   body .hero { padding-top: calc(56px + 20px); justify-content: flex-start; }
   /* فشرده‌سازی عمودی هیرو تا کل آن در ارتفاع ۷۰۰ پیکسل جا شود */
-  body .hero__title { font-size: 28px; line-height: 1.45; margin: .6rem 0 .4rem; }
+  body .hero__slogan { font-size: 38px; margin-top: .6rem; }
+  body .hero__title { font-size: 20px; line-height: 1.5; margin: .3rem 0 .4rem; }
   body .hero__lead { font-size: 14px; line-height: 1.75; }
   body .hero__visual { margin-top: 24px; }
-  body .rocket-svg { width: 170px; filter: drop-shadow(0 16px 24px rgba(145, 222, 243, .12)); }
+  body .hero__art { width: min(290px, 100%); }
   body .key-dates { margin-top: 24px; }
   body .hero__actions { margin-top: 24px; gap: .5rem; }
   body .hero__alt { margin-top: .6rem; font-size: 12px; }
@@ -640,7 +637,7 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
 }
 @media (max-width: 600px) {
   .section { padding: 76px 0; }
-  .hero { padding: 88px 0 32px; --orgs-h: 118px; }
+  .hero { padding: 88px 0 32px; --orgs-h: 140px; }
   .hero__actions { margin-top: 1.5rem; }
   .orgs__inner { flex-direction: column; padding-block: 1.2rem; }
   .org-logos { gap: 1.6rem; }
@@ -649,7 +646,7 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
   .org-logos img:last-child { height: 46px; }
   .partners__logos { gap: 1.2rem; }
   .partners__quera { height: 22px; }
-  .partners__hamrah { height: 40px; }
+  .partners__hamrah { height: 62px; }
   .key-dates > div { flex-direction: column; align-items: center; gap: 0; padding-inline: .9rem; }
   .key-dates > div:first-child { padding-inline-start: .9rem; }
   .infobar { padding: .6rem; }
@@ -747,8 +744,8 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
 .done__todo b { color: #fff; }
 .done__links { justify-content: center; width: 100%; }
 .done__orgs { display: flex; align-items: center; gap: 1.6rem; margin-top: 1.6rem; opacity: .9; }
-.done__orgs img:first-child { height: 20px; width: auto; }
-.done__orgs img:last-child { height: 36px; width: auto; }
+.done__orgs img:first-child { height: 44px; width: auto; }
+.done__orgs img:last-child { height: 20px; width: auto; }
 .done__orgs span { width: 1px; height: 28px; background: var(--line-2); }
 @media (max-width: 760px) {
   .done-page .nav__inner { display: flex; }
