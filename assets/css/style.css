@@ -171,6 +171,8 @@ b { color: #fff; }
 .partners__logos { display: flex; align-items: center; gap: 1.6rem; }
 .partners__quera { height: 26px; width: auto; }
 .partners__hamrah { height: 76px; width: auto; }
+.partners__korsi img { display: block; height: 68px; width: auto; transition: opacity .2s; }
+.partners__korsi:hover img { opacity: .8; }
 .partners__dot { width: 1px; height: 44px; background: var(--line-2); }
 
 .hero__visual { display: grid; place-items: center end; } /* در RTL یعنی چسبیده به لبه‌ی چپ گرید */
@@ -245,6 +247,7 @@ b { color: #fff; }
 .footer__orgs a:hover img { opacity: 1; }
 .footer__orgs img { height: 22px; width: auto; }
 .footer__orgs a:first-child img { height: 38px; }
+.footer__orgs .footer__korsi img { height: 44px; }
 .footer .brand { order: 0; }
 .footer .brand__logo { height: 100px; }
 
@@ -644,9 +647,10 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
   .org-logos span { display: none; }
   .org-logos img:first-child { height: 26px; }
   .org-logos img:last-child { height: 46px; }
-  .partners__logos { gap: 1.2rem; }
-  .partners__quera { height: 22px; }
-  .partners__hamrah { height: 62px; }
+  .partners__logos { gap: .8rem; }
+  .partners__quera { height: 18px; }
+  .partners__hamrah { height: 50px; }
+  .partners__korsi img { height: 48px; }
   .key-dates > div { flex-direction: column; align-items: center; gap: 0; padding-inline: .9rem; }
   .key-dates > div:first-child { padding-inline-start: .9rem; }
   .infobar { padding: .6rem; }
@@ -745,8 +749,10 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
 .done__links { justify-content: center; width: 100%; }
 .done__orgs { display: flex; align-items: center; gap: 1.6rem; margin-top: 1.6rem; opacity: .9; }
 .done__orgs img:first-child { height: 44px; width: auto; }
-.done__orgs img:last-child { height: 20px; width: auto; }
+.done__orgs .logo-white { height: 20px; width: auto; }
+.done__korsi img { display: block; height: 44px; width: auto; }
 .done__orgs span { width: 1px; height: 28px; background: var(--line-2); }
+@media (max-width: 600px) { .done__orgs { gap: .8rem; } }
 @media (max-width: 760px) {
   .done-page .nav__inner { display: flex; }
   .done-page .nav .brand { display: inline-flex; }
@@ -769,7 +775,7 @@ a.is-pending:not(.btn)::after { content: " (به‌زودی)"; font-size: .85em;
 /* ---------- حامیان ---------- */
 .sponsors { border-top: 1px solid var(--line); padding-block: 64px 72px; }
 .sponsors .section__head { margin-bottom: 2rem; }
-.sponsors__logos { display: grid; grid-template-columns: repeat(3, minmax(0, 200px)); justify-content: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.sponsors__logos { display: grid; grid-template-columns: repeat(2, minmax(0, 200px)); justify-content: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
 .sponsors__logos li { display: flex; align-items: center; justify-content: center; box-sizing: border-box; height: 150px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: border-color .25s; }
 .sponsors__logos li:hover { border-color: rgba(145, 222, 243, .35); }
 .sponsors__logos img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; opacity: .88; transition: opacity .25s; }
