@@ -8,6 +8,7 @@
 const LINKS = {
   register: 'https://quera.org/events/hamsaz1/register',  // صفحه‌ی ثبت‌نام رویداد در کوئرا
   teamBot: 'https://t.me/HamsazTeamBot',                   // بات تلگرام تیم‌سازی
+  teamPlatform: 'https://team.hamsazplus.ir/',             // پلتفرم تیم‌سازی
   supportTelegram: 'https://t.me/quera_info',              // پشتیبانی تلگرام
 };
 
