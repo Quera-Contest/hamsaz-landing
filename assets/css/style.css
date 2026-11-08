@@ -127,8 +127,6 @@ b { color: #fff; }
 .nav__links a:not(.btn) { font-weight: 500; font-size: .95rem; padding: .35rem .8rem; border-radius: 6px; color: var(--muted); transition: color .2s, background .2s; }
 .nav__links a:not(.btn):hover { color: #fff; background: rgba(255, 255, 255, .05); }
 .nav__cta { margin-inline-start: auto; }
-.nav__links a.nav__team { color: var(--cyan); border: 1px solid rgba(145, 222, 243, .35); }
-.nav__links a.nav__team:hover { color: var(--ink); background: var(--cyan); }
 .nav__burger { display: none; width: 44px; height: 44px; padding: 11px; background: none; border: 0; cursor: pointer; }
 .nav__burger span { display: block; height: 2px; background: var(--text); border-radius: 2px; margin: 5px 0; }
 .nav__cta-mobile { display: none; }
